@@ -606,7 +606,7 @@ include("language.php");
           <hr/>
         </div>
         <div class="modal-body">
-          <img src="http://www.openstreetmap.org/assets/osm_logo-79d71f6a51b0e6a724a570834c07d828.png" alt="OpenStreetMap Logo"/><br/>
+          <img src="//www.openstreetmap.org/assets/osm_logo.png" alt="OpenStreetMap Logo"/><br/>
           <?php echo POPUP_ABOUT_BODY;?>
         </div>
         <div class="modal-footer">
