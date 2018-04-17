@@ -570,6 +570,7 @@ include("language.php");
               <li><a href="?lang=en_EN"><img src="img/flags/en_EN.png"/>English</a></li>
               <li><a href="?lang=fr_FR"><img src="img/flags/fr_FR.png"/>Français</a></li>
               <li><a href="?lang=it_IT"><img src="img/flags/it_IT.png"/>Italiano</a></li>
+              <li><a href="?lang=pl_PL"><img src="img/flags/pl_PL.png"/>polski</a></li>
               <li><a href="?lang=ru_RU"><img src="img/flags/ru_RU.png"/>русский</a></li>
               <li><a href="?lang=uk_UA"><img src="img/flags/uk_UA.png"/>Український</a></li>
             </ul>
