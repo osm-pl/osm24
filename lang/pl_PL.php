@@ -329,7 +329,7 @@ define('BUTTON_CLOSE','Zamknij');
 define('BUTTON_ADD','Dodaj');
 
 define('JS_ADD_NOTE_BODY','Możesz przesłać uwagę dla mapowiczów. Zgłoszone dane zostaną dodane w ciągu kilku tygodni. Możesz to także zrobić samodzielnie! Wejdź na stronę <a href="http://openstreetmap.org">OpenStreetMap</a> i zacznij edytować. Używaj języka angielskiego lub ojczystego. Uwagi powinny być zrozumiałe dla innych.');
-define('JS_ADD_NOTE_LIST','Dodaj uwagę:');
+define('JS_ADD_NOTE_LIST','Dodane uwagi:');
 define('PLEASE_WAIT','Proszę czekać...');
 define('JS_ADD_NOTE_LABEL','Uwaga');
 define('JS_ADD_NOTE_PLACEHOLDER','Jakaś ważna wiadomość');
