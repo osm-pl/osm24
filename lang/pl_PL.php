@@ -320,7 +320,7 @@ define('PANEL_DEDICATED','Wyznaczone');
 define('PANEL_ISOLATED','Wydzielone');
 define('PANEL_SEPARATED','Osobne');
 
-define('BUTTON_SET','Wybierz');
+define('BUTTON_SET','Odśwież');
 define('BUTTON_LOCATE','Znajdź');
 define('BUTTON_STOP_LOCATE','Przestań szukać');
 define('BUTTON_ABOUT','O serwisie');
