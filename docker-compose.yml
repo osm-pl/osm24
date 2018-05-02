@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  nginx-php-fpm:
+    image: richarvey/nginx-php-fpm:1.5.0
+    restart: always
+    environment:
+      WEBROOT: '/var/www/html'
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - '8080:80'
