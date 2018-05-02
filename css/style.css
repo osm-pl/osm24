@@ -375,3 +375,9 @@ table, tr, th, td {
 .leaflet-control .glyphicon {
     margin: 0;
 }
+
+.language-switcher .flag {
+  width: 20px;
+  border: 1px solid grey;
+  margin-right: 5px;
+}

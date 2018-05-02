@@ -560,19 +560,19 @@ include("language.php");
          </ul>
 
          <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a class="dropdown-toggle" style="padding: 4px; margin: 0px" data-toggle="dropdown">
-              <img src="img/flags/<?php echo $_SESSION['lang'];?>.png"/>
+          <li class="dropdown language-switcher">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <img class="flag" src="img/flags/<?php echo $_SESSION['lang'];?>.png"/>
             <b class="caret"></b>
             </a>
             <ul class="dropdown-menu flags">
-              <li><a href="?lang=de_DE"><img src="img/flags/de_DE.png"/>Deutsch</a></li>
-              <li><a href="?lang=en_EN"><img src="img/flags/en_EN.png"/>English</a></li>
-              <li><a href="?lang=fr_FR"><img src="img/flags/fr_FR.png"/>Français</a></li>
-              <li><a href="?lang=it_IT"><img src="img/flags/it_IT.png"/>Italiano</a></li>
-              <li><a href="?lang=pl_PL"><img src="img/flags/pl_PL.png"/>polski</a></li>
-              <li><a href="?lang=ru_RU"><img src="img/flags/ru_RU.png"/>Русский</a></li>
-              <li><a href="?lang=uk_UA"><img src="img/flags/uk_UA.png"/>Українська</a></li>
+              <li><a href="?lang=de_DE"><img class="flag" src="img/flags/de_DE.png"/>Deutsch</a></li>
+              <li><a href="?lang=en_EN"><img class="flag" src="img/flags/en_EN.png"/>English</a></li>
+              <li><a href="?lang=fr_FR"><img class="flag" src="img/flags/fr_FR.png"/>Français</a></li>
+              <li><a href="?lang=it_IT"><img class="flag" src="img/flags/it_IT.png"/>Italiano</a></li>
+              <li><a href="?lang=pl_PL"><img class="flag" src="img/flags/pl_PL.png"/>polski</a></li>
+              <li><a href="?lang=ru_RU"><img class="flag" src="img/flags/ru_RU.png"/>Русский</a></li>
+              <li><a href="?lang=uk_UA"><img class="flag" src="img/flags/uk_UA.png"/>Українська</a></li>
             </ul>
           </li>
           <li><button onclick="ustaw()" type="button" class="btn btn-primary navbar-btn"><?php echo BUTTON_SET;?></button></li>
