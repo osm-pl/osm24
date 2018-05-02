@@ -13,7 +13,7 @@ include("language.php");
 
     <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
-    <title>osm24.eu</title>
+    <title>osm24</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/leaflet.css" />
     <link rel="stylesheet" href="css/MarkerCluster.css"/>
@@ -88,7 +88,7 @@ include("language.php");
 -            Menu
 -          </button><table><tr><td>
           <a id="open-left"></a></td><td>
-          <i class="navbar-brand">osm24.eu</i></td></tr></table>
+          <i class="navbar-brand">osm24</i></td></tr></table>
         </div>
         <div class="collapse navbar-collapse global-menu-data">
           <ul class="nav navbar-nav">
