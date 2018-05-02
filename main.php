@@ -31,7 +31,6 @@ include("language.php");
     <script src="js/bootstrap.min.js"></script>
     <script src="js/leaflet.js"></script>
     <script src="js/leaflet.markercluster.js"></script>
-    <script src="http://coinwidget.com/widget/coin.js"></script>
     <script src="js/leaflet-hash.js"></script>
     <script src="js/leaflet-timeslider.js"></script>
     <script src="js/Control.NominatimGeocoder.js"></script>
@@ -57,16 +56,6 @@ include("language.php");
     <script src="js/opening_hours+deps.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/leaflet.label.css" rel="stylesheet">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-51879555-1', 'osm24.eu');
-  ga('send', 'pageview');
-
-</script>
   </head>
   <body>
   <div class="snap-drawers">
@@ -589,21 +578,7 @@ include("language.php");
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Osm24   <script>
-            CoinWidgetCom.go({
-                wallet_address: "1ErU8U4bREFeUWywiBFjj3sCXudMqhEjCf"
-              , currency: "bitcoin"
-              , counter: "count"
-              , alignment: "bl"
-              , qrcode: true
-              , auto_show: false
-              , lbl_button: "Donate"
-              , lbl_address: "My Bitcoin Address:"
-              , lbl_count: "donations"
-              , lbl_amount: "BTC"
-              });
-          </script><div id='main-plus' size="small" data-href='http://osm24.eu'></div></h4>
-          <hr/>
+          <h4 class="modal-title">osm24</h4>
         </div>
         <div class="modal-body">
           <img src="//www.openstreetmap.org/assets/osm_logo.png" alt="OpenStreetMap Logo"/><br/>
