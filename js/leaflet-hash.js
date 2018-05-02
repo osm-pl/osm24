@@ -14,10 +14,6 @@
 	};
 
 	L.Hash.parseHash = function(hash) {
-        ga('send', 'pageview', {
-                  'page': hash,
-                  'title': 'Permalink'
-        });
 		if(hash.indexOf('#') === 0) {
 			hash = hash.substr(1);
 		}
@@ -119,10 +115,6 @@
 				  location.replace(hash);
                 }
 				this.lastHash = hash;
-                ga('send', 'pageview', {
-                  'page': hash,
-                  'title': 'Moved'
-                });
 			}
 		},
 

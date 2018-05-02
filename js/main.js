@@ -20,11 +20,6 @@ function addElement(e){
     marker.el = poi;
     marker.on("click",function(){
               this.label.close();
-              ga('send', 'pageview', {
-                 'page': VAL[1],
-                 'title': 'PopupMob'
-                 });
-
               showMessage(name,popup.outerHTML,0);
               DISQUS.reset({
                  reload: true,
@@ -42,10 +37,6 @@ function addElement(e){
     marker.el = poi;
     marker.on("click",function(){
               this.label.close();
-              ga('send', 'pageview', {
-                 'page': VAL[1],
-                 'title': 'Popup'
-                 });
               DISQUS.reset({
                  reload: true,
                  config: function () {  
@@ -476,15 +467,7 @@ var zoomControl = L.control.zoom({
   map.on('locationerror', onLocationError);
 
   map.on('moveend', nominatimQuery);
-  map.on('popupopen', function() {
-    var href=$("#plusone-div").data("href");
-    var size=$("#plusone-div").data("size");
-    gapi.plusone.render("plusone-div",{'size':size,'href':href});
-  });
   n=true;
-  var href=$("#main-plus").data("href");
-  var size=$("#main-plus").data("size");
-  gapi.plusone.render("main-plus",{'size':size,'href':href});
 
   if(typeof get_locate != 'undefined')
     map.locate({setView:true,maxZoom: 16, enableHighAccuracy: true, maximumAge: 30000, timeout: 3000000,});
