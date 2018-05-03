@@ -176,7 +176,7 @@ POI.prototype.getInfoBox = function(){
             content+="24h<br/>";
         else
             content+=this.drawTable(this.oh, new Date());
-        content+='<a href="https://github.com/ypid/opening_hours.js/commits/master/demo.html">Author</a></div>';
+        content+='</div>';
       }
 
       //comments

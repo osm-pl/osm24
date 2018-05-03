@@ -54,7 +54,7 @@ include("language.php");
     ?>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <script src="js/easyoverpass.js"></script>
-    <script src="js/opening_hours.js"></script>  
+    <script src="js/opening_hours+deps.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/leaflet.label.css" rel="stylesheet">
 <script>
