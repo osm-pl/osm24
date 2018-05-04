@@ -124,7 +124,7 @@ function showNoteMessage(header,body,callback,lon,lat){
 
 function add(lonv,latv,name){
   $.ajax({
-    url: "http://osm24.eu/add_note.php",
+    url: "add_note.php",
     data: {lon:lonv,lat:latv,text:"("+name+") "+$( "#text1").val()},
     success: function(data){$msg2Modal.modal('hide')},
   });
