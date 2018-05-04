@@ -14,3 +14,9 @@ Stop:
 ```
 docker-compose down
 ```
+
+# Configuration
+
+Configuration is stored inside `config.php` file. Please see this file for all the details.
+
+All secret information (like passwords) should be kept inside `config.local.php` (example: `config.local.example.php`) which will never be stored inside VCS repository.
