@@ -78,7 +78,7 @@ L.Control.NominatimGeocoder = L.Control.extend({
 			limit: 1,
 			json_callback : this._callbackId
 		},
-		url =  "http://open.mapquestapi.com/nominatim/v1/search" + L.Util.getParamString(params),
+		url =  "https://nominatim.openstreetmap.org/search" + L.Util.getParamString(params),
 		script = document.createElement("script");
 
 		script.type = "text/javascript";
