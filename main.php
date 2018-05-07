@@ -23,11 +23,11 @@ include("language.php");
     <link href="css/slider.css" rel="stylesheet">
     <link href="css/datepicker.css" rel="stylesheet">
     <!--[if lte IE 8]>
-      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+      <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
     <![endif]-->
 
     <script src="js_lang.php?cache=<?php echo $_SESSION['lang'];?>"></script>
-    <script src="http://code.jquery.com/jquery-2.0.2.js">{"parsetags": "explicit"}</script>
+    <script src="https://code.jquery.com/jquery-2.0.2.js">{"parsetags": "explicit"}</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/leaflet.js"></script>
     <script src="js/leaflet.markercluster.js"></script>

@@ -1,5 +1,5 @@
-var url="http://overpass-api.de/api/interpreter?";
-//var url="http://overpass.osm.rambler.ru/cgi/interpreter?";
+var url="https://overpass-api.de/api/interpreter?";
+//var url="https://overpass.osm.rambler.ru/cgi/interpreter?";
 var n=false;
 var datan=new Date();
 (function(i){var e=/iPhone/i,n=/iPod/i,o=/iPad/i,t=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,r=/Android/i,d=/BlackBerry/i,s=/Opera Mini/i,a=/IEMobile/i,b=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,h=RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),c=function(i,e){return i.test(e)},l=function(i){var l=i||navigator.userAgent;this.apple={phone:c(e,l),ipod:c(n,l),tablet:c(o,l),device:c(e,l)||c(n,l)||c(o,l)},this.android={phone:c(t,l),tablet:!c(t,l)&&c(r,l),device:c(t,l)||c(r,l)},this.other={blackberry:c(d,l),opera:c(s,l),windows:c(a,l),firefox:c(b,l),device:c(d,l)||c(s,l)||c(a,l)||c(b,l)},this.seven_inch=c(h,l),this.any=this.apple.device||this.android.device||this.other.device||this.seven_inch},v=i.isMobile=new l;v.Class=l})(window);
@@ -82,7 +82,7 @@ function showNoteMessage(header,body,callback,lon,lat){
   var delta=0.001;
   console.log(lon+" :" +lat);
   $.ajax({
-    url: "http://api.openstreetmap.org/api/0.6/notes.json",
+    url: "https://api.openstreetmap.org/api/0.6/notes.json",
     data: {bbox: ''+(lon-delta)+','+(lat-delta)+','+(lon+delta)+','+(lat+delta)},
     success: function(data){
        var n=$msg2Modal.find("#notes-message");
@@ -277,7 +277,7 @@ function placeChanged(){
 
 
 var nominatimQuery = function (){
-  var url = 'http://nominatim.openstreetmap.org/reverse';
+  var url = 'https://nominatim.openstreetmap.org/reverse';
   url += '?format=json&lat=' + map.getCenter().lat + '&lon=' + map.getCenter().lng+'&zoom='+map.getZoom()+"&addressdetails=1";
 
   $.ajax({
@@ -384,7 +384,7 @@ var zoomControl = L.control.zoom({
   $('#mapper').removeAttr("checked");
 
   var attrib = 'ODbL OpenStreetMap, Data: <a href="http://www.overpass-api.de/">OverpassAPI</a>';
-  var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, subdomains: 'abc', attribution: attrib,   detectRetina: true});
+  var osm = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, subdomains: 'abc', attribution: attrib,   detectRetina: true});
 
 /*              URL_UPDATE           */
   map.params_url={};
