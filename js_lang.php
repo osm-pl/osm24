@@ -8,7 +8,6 @@ var lang_status='<?php echo addslashes(JS_STATUS);?>';
 var lang_note='<?php echo addslashes(JS_NOTE);?>';
 var lang_opening_hours='<?php echo addslashes(JS_OPENING_HOURS);?>';
 var lang_basic='<?php echo addslashes(JS_BASIC);?>';
-var lang_comments='<?php echo addslashes(JS_COMMENTS);?>';
 var lang_advanced='<?php echo addslashes(JS_ADVANCED);?>';
 var lang_key='<?php echo addslashes(JS_KEY);?>';
 var lang_value='<?php echo addslashes(JS_VALUE);?>';
@@ -25,4 +24,4 @@ var lang_close='<?php echo addslashes(JS_CLOSE);?>';
 var lang_nodata='<?php echo addslashes(JS_NO_DATA);?>';
 
 
-	
+
