@@ -25,6 +25,11 @@ include("language.php");
     <!--[if lte IE 8]>
       <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
     <![endif]-->
+    <script type="text/javascript">
+      window.AppConfig = {
+         "websiteUrl": "osmapa.pl/osm24",
+      }
+    </script>
 
     <script src="js_lang.php?cache=<?php echo $_SESSION['lang'];?>"></script>
     <script src="https://code.jquery.com/jquery-2.0.2.js">{"parsetags": "explicit"}</script>
@@ -85,7 +90,7 @@ include("language.php");
               <a class="dropdown-toggle btn-select" id="type" data-toggle="dropdown"><?php echo PANEL_EAT;?><span class="caret"></span></a>
               <ul class="dropdown-menu select-one-change sort">
                 <li><a id="all"  data-tag-pair="['amenity'='restaurant']@['amenity'='fast_food']@['amenity'='cafe']@['amenity'='ice_cream']@[shop]@[office]@[craft]@[sport]@[amenity=toilets]@[amenity=drinking_water]@['amenity'='pub']@['amenity'='bar']@['amenity'='nightclub']@['amenity'='biergarten']@['amenity'='stripclub']@[amenity='pharmacy']@[amenity='fuel']@['amenity'='bank']@['amenity'='atm']@['amenity'='cinema']@['amenity'='theatre']@['amenity'='college']@['amenity'='library']@['amenity'='university']@['amenity'='kindergarten']@[tourism]@['amenity'='clinic']@['amenity'='hospital']@['amenity'='dentist']@['amenity'='doctors']@['amenity'='veterinary']@['amenity'='social_facility']@['emergency'='ambulance_station']@['emergency'='defibrillator']" data-tag-type="main"><?php echo PANEL_ALL;?></a></li>
-                <li class="divider"></li>                
+                <li class="divider"></li>
                 <li><a id="craft"><?php echo PANEL_CRAFT;?></a></li>
                 <li><a id="health"><?php echo PANEL_HEALTH;?></a></li>
                 <li><a id="eat"  data-tag-pair="['amenity'='restaurant']@['amenity'='fast_food']@['amenity'='cafe']@['amenity'='ice_cream']" data-tag-type="main"><?php echo PANEL_EAT;?></a></li>
@@ -106,28 +111,28 @@ include("language.php");
               <ul class="dropdown-menu select-one dropdown-menu-long tag-parent" data-tag-key="cuisine" data-tag-char="~">
                 <li><a id="c-all" data-tag-pair="$$"><?php echo PANEL_CUISINE_ALL;?></a></li>
                 <li class="divider"></li>
-                <li><a id="bagel"><?php echo PANEL_CUISINE_BAGEL;?></a></li>	
-                <li><a id="barbecue"><?php echo PANEL_CUISINE_BARBECUE;?></a></li> 		
-                <li><a id="bougatsa"><?php echo PANEL_CUISINE_BOUGATSA;?></a></li>	
-                <li><a id="burger"><?php echo PANEL_CUISINE_BURGER;?></a></li> 		
-                <li><a id="cake"><?php echo PANEL_CUISINE_CAKE;?></a></li>	
+                <li><a id="bagel"><?php echo PANEL_CUISINE_BAGEL;?></a></li>
+                <li><a id="barbecue"><?php echo PANEL_CUISINE_BARBECUE;?></a></li>
+                <li><a id="bougatsa"><?php echo PANEL_CUISINE_BOUGATSA;?></a></li>
+                <li><a id="burger"><?php echo PANEL_CUISINE_BURGER;?></a></li>
+                <li><a id="cake"><?php echo PANEL_CUISINE_CAKE;?></a></li>
                 <li><a id="chicken"><?php echo PANEL_CUISINE_CHICKEN;?></a></li>
-                <li><a id="coffee_shop" data-tag-exclude="['amenity'='cafe']"><?php echo PANEL_CUISINE_CAFFEE_SHOP;?></a></li> 		
-                <li><a id="crepe"><?php echo PANEL_CUISINE_CREPE;?></a></li>		
-                <li><a id="couscous"><?php echo PANEL_CUISINE_COUSCOUS;?></a></li>		
-                <li><a id="curry"><?php echo PANEL_CUISINE_CURRY;?></a></li>		
+                <li><a id="coffee_shop" data-tag-exclude="['amenity'='cafe']"><?php echo PANEL_CUISINE_CAFFEE_SHOP;?></a></li>
+                <li><a id="crepe"><?php echo PANEL_CUISINE_CREPE;?></a></li>
+                <li><a id="couscous"><?php echo PANEL_CUISINE_COUSCOUS;?></a></li>
+                <li><a id="curry"><?php echo PANEL_CUISINE_CURRY;?></a></li>
                 <li><a id="donut"><?php echo PANEL_CUISINE_DONUT;?></a></li>
                 <li><a id="doughnut"><?php echo PANEL_CUISINE_DOUGHNUT;?></a></li>
                 <li><a id="empanada"><?php echo PANEL_CUISINE_EMPANADA;?></a></li>
-                <li><a id="fish_and_chips"><?php echo PANEL_CUISINE_FISH_AND_CHIPS;?></a></li>	
-                <li><a id="fried_food"><?php echo PANEL_CUISINE_FRIED_FOOD;?></a></li>	
-                <li><a id="friture"><?php echo PANEL_CUISINE_FRITURE;?></a></li> 		
-                <li><a id="ice_cream" data-tag-exclude="['amenity'='ice_cream']"><?php echo PANEL_CUISINE_ICE_CREAM;?></a></li>	
+                <li><a id="fish_and_chips"><?php echo PANEL_CUISINE_FISH_AND_CHIPS;?></a></li>
+                <li><a id="fried_food"><?php echo PANEL_CUISINE_FRIED_FOOD;?></a></li>
+                <li><a id="friture"><?php echo PANEL_CUISINE_FRITURE;?></a></li>
+                <li><a id="ice_cream" data-tag-exclude="['amenity'='ice_cream']"><?php echo PANEL_CUISINE_ICE_CREAM;?></a></li>
                 <li><a id="kebab"><?php echo PANEL_CUISINE_KEBAB;?></a></li>
                 <li><a id="mediterranean"><?php echo PANEL_CUISINE_MEDITERRANEAN;?></a></li>
-                <li><a id="noodle"><?php echo PANEL_CUISINE_NOODLE;?></a></li>		
-                <li><a id="pancake"><?php echo PANEL_CUISINE_PANCAKE;?></a></li>	
-                <li><a id="pasta"><?php echo PANEL_CUISINE_PASTA;?></a></li> 
+                <li><a id="noodle"><?php echo PANEL_CUISINE_NOODLE;?></a></li>
+                <li><a id="pancake"><?php echo PANEL_CUISINE_PANCAKE;?></a></li>
+                <li><a id="pasta"><?php echo PANEL_CUISINE_PASTA;?></a></li>
                 <li><a id="pie"><?php echo PANEL_CUISINE_PIE;?></a></li>
                 <li><a id="pizza"><?php echo PANEL_CUISINE_PIZZA;?></a></li>
                 <li><a id="regional"><?php echo PANEL_CUISINE_REGIONAL;?></a></li>
@@ -254,8 +259,8 @@ include("language.php");
               <a class="dropdown-toggle btn-select" id="where" data-toggle="dropdown" ><?php echo PANEL_WHERE;?><span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-always-on  tag-parent">
                 <li class="dropdown-header"><?php echo PANEL_WHERE_HEADER;?></li>
-                <li class="select-multi-state"><a id="pub" data-tag-pair-s0="['amenity'='pub']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_PUB;?></a></li> 
-                <li class="select-multi-state"><a id="bar"  data-tag-pair-s0="['amenity'='bar']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_BAR;?></a></li>		
+                <li class="select-multi-state"><a id="pub" data-tag-pair-s0="['amenity'='pub']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_PUB;?></a></li>
+                <li class="select-multi-state"><a id="bar"  data-tag-pair-s0="['amenity'='bar']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_BAR;?></a></li>
                 <li class="select-multi-state"><a id="nightclub" data-tag-pair-s0="['amenity'='nightclub']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_NIGHTCLUB;?></a></li>
                 <li class="select-multi-state"><a id="biergarten" data-tag-pair-s0="['amenity'='biergarten']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_BIERGARTEN;?></a></li>
                 <li class="select-multi-state"><a id="stripclub" data-tag-pair-s0="['amenity'='stripclub']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_STRIPCLUB;?></a></li>
@@ -334,9 +339,9 @@ include("language.php");
                 <li class="dropdown-header"><?php echo PANEL_ACCESS_HEADER;?></li>
                 <li class="select-multi-state"><a id="male" data-tag-pair-s1="['male'~'yes|only']" data-tag-pair-s2="['male'='only']"><span style="display:none;" class="glyphicon glyphicon-ok state1"></span><span style="display:none;" class="glyphicon glyphicon-ok-sign state2"></span><?php echo PANEL_ACCESS_MALE;?></a></li>
                 <li class="select-multi-state"><a id="female" data-tag-pair-s1="['female'~'yes|only']" data-tag-pair-s2="['female'='only']"><span style="display:none;" class="glyphicon glyphicon-ok state1"></span><span style="display:none;" class="glyphicon glyphicon-ok-sign state2"></span><?php echo PANEL_ACCESS_FEMALE;?></a></li>
-                <li class="select-multi-state"><a id="gay"  data-tag-pair-s1="['gay'~'yes|only|welcome']" data-tag-pair-s2="['gay'='only']"><span style="display:none;" class="glyphicon glyphicon-ok state1"></span><span style="display:none;" class="glyphicon glyphicon-ok-sign state2"></span><?php echo PANEL_ACCESS_GAY;?></a></li>                
+                <li class="select-multi-state"><a id="gay"  data-tag-pair-s1="['gay'~'yes|only|welcome']" data-tag-pair-s2="['gay'='only']"><span style="display:none;" class="glyphicon glyphicon-ok state1"></span><span style="display:none;" class="glyphicon glyphicon-ok-sign state2"></span><?php echo PANEL_ACCESS_GAY;?></a></li>
               </ul>
-            </li>        
+            </li>
 
             <li style="display:none;" class="dropdown  btn-group btn-group-own  visible-buy">
               <a class="dropdown-toggle btn-select tag-default" id="store" data-toggle="dropdown" data-default-id="store_all" data-arrow><?php echo PANEL_STORE;?><span class="caret"></span></a>
@@ -359,9 +364,9 @@ include("language.php");
               <a class="dropdown-toggle btn-select" id="exercise_where" data-toggle="dropdown" ><?php echo PANEL_WHERE;?><span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-always-on  tag-parent">
                 <li class="dropdown-header"><?php echo PANEL_WHERE_HEADER;?></li>
-                <li class="select-multi-state"><a id="sport_centre" data-tag-pair-s0="['leisure'='sports_centre']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_SPORT_CENTRE;?></a></li> 
+                <li class="select-multi-state"><a id="sport_centre" data-tag-pair-s0="['leisure'='sports_centre']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_SPORT_CENTRE;?></a></li>
                 <li class="select-multi-state"><a id="pitch"  data-tag-pair-s0="['leisure'='pitch']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_PITCH;?></a></li>
-                <li class="select-multi-state"><a id="stadium"  data-tag-pair-s0="['leisure'='stadium']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_STADIUM;?></a></li>		
+                <li class="select-multi-state"><a id="stadium"  data-tag-pair-s0="['leisure'='stadium']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_STADIUM;?></a></li>
                 <li class="select-multi-state"><a id="swimming_pool" data-tag-pair-s0="['leisure'='swimming_pool']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_SWIMMING_POOL;?></a></li>
                 <li class="select-multi-state"><a id="track" data-tag-pair-s0="['leisure'='track']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_TRACK;?></a></li>
                 <li class="select-multi-state"><a id="other_a" data-tag-pair-s0="[sport]" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_WHERE_OTHER;?></a></li>
@@ -372,7 +377,7 @@ include("language.php");
               <a class="dropdown-toggle btn-select" id="sport" data-toggle="dropdown" data-arrow><?php echo PANEL_SPORT;?><span class="caret"></span></a>
               <ul class="dropdown-menu select-one dropdown-menu-long tag-parent" data-tag-key="sport" data-tag-char="~">
                 <li><a id="sport-all" data-tag-pair="$$"><?php echo PANEL_SPORT_ALL;?></a></li>
-                <li class="divider"></li>	
+                <li class="divider"></li>
                 <li><a id="9pin"><?php echo PANEL_SPORT_9PIN;?></a></li>
                 <li><a id="10pin"><?php echo PANEL_SPORT_10PIN;?></a></li>
                 <li><a id="american_football"><?php echo PANEL_SPORT_AMERICAN_FOOTBALL;?></a></li>
@@ -479,8 +484,8 @@ include("language.php");
               <a class="dropdown-toggle btn-select" id="education_type" data-toggle="dropdown" ><?php echo PANEL_EDUCATION_TYPE;?><span class="caret"></span></a>
               <ul class="dropdown-menu dropdown-always-on  tag-parent">
                 <li class="dropdown-header"><?php echo PANEL_EDUCATION_TYPE_HEADER;?></li>
-                <li class="select-multi-state"><a id="library" data-tag-pair-s0="['amenity'='library']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_EDUCATION_TYPE_LIBRARY;?></a></li> 
-                <li class="select-multi-state"><a id="kindergarten"  data-tag-pair-s0="['amenity'='kindergarten']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_EDUCATION_TYPE_KINDERGARTEN;?></a></li>		
+                <li class="select-multi-state"><a id="library" data-tag-pair-s0="['amenity'='library']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_EDUCATION_TYPE_LIBRARY;?></a></li>
+                <li class="select-multi-state"><a id="kindergarten"  data-tag-pair-s0="['amenity'='kindergarten']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_EDUCATION_TYPE_KINDERGARTEN;?></a></li>
                 <li class="select-multi-state"><a id="school"  data-tag-pair-s0="['amenity'='school']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_EDUCATION_TYPE_SCHOOL;?></a></li>
                 <li class="select-multi-state"><a id="university"  data-tag-pair-s0="['amenity'='university']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_EDUCATION_TYPE_UNIVERSITY;?></a></li>
                 <li class="select-multi-state"><a id="college"  data-tag-pair-s0="['amenity'='college']" data-tag-type="main"><span class="glyphicon glyphicon-ok state0"></span><span style="display:none;" class="glyphicon glyphicon-remove state1"></span><?php echo PANEL_EDUCATION_TYPE_COLLEGE;?></a></li>
@@ -598,7 +603,7 @@ include("language.php");
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h3 class="modal-title"></h3>
         </div>
-        <div class="modal-body">  
+        <div class="modal-body">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo BUTTON_CLOSE;?></button>
