@@ -18,33 +18,19 @@ function addElement(e){
     marker=new L.marker(pos, {icon: m_icon,riseOnHover: true}).
                         bindLabel(poi.getName());
     marker.el = poi;
-    marker.on("click",function(){
-              this.label.close();
-              showMessage(name,popup.outerHTML,0);
-              DISQUS.reset({
-                 reload: true,
-                 config: function () {  
-                    this.page.identifier = e.id+"";  
-                    this.page.url = VAL[1];
-                 }
-              });
-    },marker);
+    marker.on("click", function(){
+      this.label.close();
+      showMessage(name, popup.outerHTML, 0);
+    }, marker);
 
 
   }else{
     marker=new L.marker(pos, {icon: m_icon,riseOnHover: true}).
                         bindLabel(poi.getName()).bindPopup(popup, {minWidth: 350});
     marker.el = poi;
-    marker.on("click",function(){
-              this.label.close();
-              DISQUS.reset({
-                 reload: true,
-                 config: function () {  
-                    this.page.identifier = e.id+"";  
-                    this.page.url = VAL[1];
-                 }
-              });
-           },marker);
+    marker.on("click", function() {
+      this.label.close();
+    }, marker);
   }
   return marker;
 }
@@ -151,16 +137,6 @@ Object.size = function(obj) {
 var map;
 var location_marker;
 var location_circle;
-
-    var disqus_shortname = 'gdzieblee'; 
-
-
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-
 
 function onLocationFound(e) {
   if(locate==3){map.stopLocate();return;}

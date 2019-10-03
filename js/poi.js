@@ -142,7 +142,6 @@ POI.prototype.getInfoBox = function(){
   if(typeof this.oh != 'undefined' && this.element.tags.hasOwnProperty("opening_hours"))
     tabs+='<li><a href="#hours" data-toggle="tab">'+lang_opening_hours+'</a></li>';
 
-  tabs+='<li><a href="#comments" data-toggle="tab">'+lang_comments+'</a></li>';
   tabs+='<li><a href="#tags" data-toggle="tab">'+lang_advanced+'</a></li></ul>';
 
   var content = '<div class="tab-content">';
@@ -178,9 +177,6 @@ POI.prototype.getInfoBox = function(){
             content+=this.drawTable(this.oh, new Date());
         content+='</div>';
       }
-
-      //comments
-      content+='<div class="tab-pane" id="comments"><div id="disqus_thread"></div></div>';
 
       //tags
       content+='<div class="tab-pane" id="tags"><table class="table table-condensed">';
