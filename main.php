@@ -25,6 +25,11 @@ include("language.php");
     <!--[if lte IE 8]>
       <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
     <![endif]-->
+    <script type="text/javascript">
+      window.AppConfig = {
+         "websiteUrl": "osmapa.pl/osm24",
+      }
+    </script>
 
     <script src="js_lang.php?cache=<?php echo $_SESSION['lang'];?>"></script>
     <script src="https://code.jquery.com/jquery-2.0.2.js">{"parsetags": "explicit"}</script>

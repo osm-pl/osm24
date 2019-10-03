@@ -1,10 +1,10 @@
 {
     "data_format": 1,
-    "data_url": "http://osm24.eu/taginfo.json",
+    "data_url": "http://osmapa.pl/osm24/taginfo.json",
     "project": {
         "name": "OSM24",
-		"description": "POIs map with opening hours and filtering.",
-        "project_url": "http://osm24.eu",
+        "description": "POIs map with opening hours and filtering.",
+        "project_url": "http://osmapa.pl/osm24",
         "contact_name": "Adam Jordanek",
         "contact_email": "dotevo@gmail.com"
     },
