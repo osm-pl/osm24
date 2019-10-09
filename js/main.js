@@ -66,7 +66,7 @@ function showMessage(header, body, callback) {
 
 function showNoteMessage(header,body,callback,lon,lat){
   var delta=0.001;
-  console.log(lon+" :" +lat);
+  // NOTE(prmtl): fetch and show notes around point where user want to report new note
   $.ajax({
     url: "https://api.openstreetmap.org/api/0.6/notes.json",
     data: {bbox: ''+(lon-delta)+','+(lat-delta)+','+(lon+delta)+','+(lat+delta)},
@@ -98,12 +98,17 @@ function showNoteMessage(header,body,callback,lon,lat){
 }
 
 //*****************************NOTES********************************
-
-function add(lonv,latv,name){
+function addNewNote(lonv, latv, name) {
+  const text = "(" + name + ") " + $( "#text1").val()
   $.ajax({
-    url: "add_note.php",
-    data: {lon:lonv,lat:latv,text:"("+name+") "+$( "#text1").val()},
-    success: function(data){$msg2Modal.modal('hide')},
+    url: "https://api.openstreetmap.org/api/0.6/notes",
+    method: "post",
+    data: {
+      lon: lonv,
+      lat: latv,
+      text: text,
+    },
+    success: function() { $msg2Modal.modal('hide') },
   });
 }
 
@@ -165,7 +170,7 @@ function onLocationError(e) {
 
 function report_poi (e) {
   showNoteMessage(lang_report,note_body,function n(){
-         add(e.latlng.lng, e.latlng.lat,'Main report');
+         addNewNote(e.latlng.lng, e.latlng.lat,'Main report');
     },e.latlng.lng,e.latlng.lat);
 }
 
